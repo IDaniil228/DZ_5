@@ -37,7 +37,7 @@ namespace DZ_5
         /// <returns></returns>
         static List<char> fileTextList()
         {
-            string path = Environment.CurrentDirectory + @"\Text.txt";
+            string path = Environment.CurrentDirectory.Remove(Environment.CurrentDirectory.Length - 9) + "Text.txt";
             string fileText = File.ReadAllText(path);
             List<char> latters = new List<char>();
             for (int i = 0; i < fileText.Length; i++)
@@ -52,7 +52,7 @@ namespace DZ_5
         /// <returns></returns>
         static char[] fileText()
         {
-            string path = Environment.CurrentDirectory + @"\Text.txt";
+            string path = Environment.CurrentDirectory.Remove(Environment.CurrentDirectory.Length - 9) + "Text.txt";
             string fileText = File.ReadAllText(path);
             char[] latters = new char[fileText.Length];
             for (int i = 0; i < fileText.Length; i++)

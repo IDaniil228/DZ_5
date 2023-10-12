@@ -12,8 +12,8 @@ namespace DZ_5_2_
             List<string> path = new List<string>();
             for (int i = 1; i < 13; i++)
             {
-                path.Add($"{Environment.CurrentDirectory}@\\Image({i}).png\\");
-                path.Add($"{Environment.CurrentDirectory}@\\Image({i}.{i}).png\\");
+                path.Add($"{Environment.CurrentDirectory.Remove(Environment.CurrentDirectory.Length - 9)}\\Image({i}).png\\");
+                path.Add($"{Environment.CurrentDirectory.Remove(Environment.CurrentDirectory.Length - 9)}\\Image({i}.{i}).png\\");
             }
             Console.WriteLine("Список до перемешивания:");
             for (int i = 0;i < path.Count;i++) 
